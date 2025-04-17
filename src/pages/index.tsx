@@ -12,12 +12,15 @@ let canal = 'CFB Cursos';
 //   return canal
 // }
 
-//função que retorna um bloco mais complexo(com um componente) usamo return() com parenteses
+//usamos o className para atribuir uma classe à tag
 function Topo(){
   return(
-    <div>
+    <div className='flex justify-between items-center bg-cyan-400 h-[100px] '>
       <div>Logo</div>
-      <div>{canal}</div>
+      <div className="flex flex-col justify-center items-center">
+        <div className="text-3xl">{canal}</div>
+        <div className="subtituloTopo">Curso de React</div>
+      </div>
       <div>{nome}</div>
     </div>
   ) 
@@ -26,9 +29,6 @@ function Topo(){
 export default function Home() {
   return (
       <div>
-        {/* utilizar a função Topo */}
-        {/*Topo()*/}
-        {/* podemos utilizar como uma tag <> pq ela retorna um componente, o nome da função precisa estar com a primeira letra maiúscula, para o react entender que é um componente */}
         <Topo/>
       </div>      
   );

@@ -1,7 +1,9 @@
 @import "tailwindcss";
-/* @tailwind base;
-@tailwind utilities;
-@tailwind components; */
+@import "tailwindcss/preflight";  /* Reset CSS (substituto do base) */
+@import "tailwindcss/utilities"; /* Todas as utilities */
+
+/*Importar outro css*/
+@import './topo.css';
 
 :root {
   --background: #ffffff;
@@ -20,3 +22,4 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+

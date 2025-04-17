@@ -41,3 +41,7 @@ Material Icon Theme (opcional)
 ## Instalar somente o NEXT (pacotes), caso necessário
 
 `npm install next@latest react@latest react-dom@latest`
+
+## Instalar as dependências do PostCSS caso necessário
+
+`npm install postcss postcss-loader css-loader --save-dev`
