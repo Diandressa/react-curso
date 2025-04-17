@@ -37,3 +37,7 @@ Tailwind CSS IntelliSense
 JavaScript and TypeScript Night
 
 Material Icon Theme (opcional)
+
+## Instalar somente o NEXT (pacotes), caso necessário
+
+`npm install next@latest react@latest react-dom@latest`
