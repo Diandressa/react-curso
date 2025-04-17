@@ -29,3 +29,11 @@ Would you like to use App Router? (recommended) » **No** / Yes
 Would you like to use Turbopack for `next dev`? » **No** / Yes
 
 Would you like to customize the import alias (`@/*` by default)? » **No** / Yes
+
+## Extenções do VSCode
+
+Tailwind CSS IntelliSense
+
+JavaScript and TypeScript Night
+
+Material Icon Theme (opcional)
