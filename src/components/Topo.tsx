@@ -9,7 +9,6 @@ export default function Topo() {
             </div>
             <div>Andressa</div>
             {/*Podemos usar um componente dentro de outro componente */}
-            <Card/>
         </div>
     )
 }

@@ -14,10 +14,10 @@ export default function Home() {
         </div>
         <div className="flex justify-center gap-3">
           {/* passando a propriedade que era receber na função desse componente - armazena na variável props*/}
-          <Card produto={"Mouse"} valor={'R$49,90'}/>
-          <Card produto={"Teclado"} valor={'R$69,90'}/>
-          <Card produto={"Monitor"} valor={'R$459,90'}/>
-          <Card produto={"CPU"} valor={'R$799,90'}/>
+          <Card produto={"Mouse"} valor={49.90} desconto={10}/>
+          <Card produto={"Teclado"} valor={69.90} desconto={2}/>
+          <Card produto={"Monitor"} valor={459.90} desconto={5}/>
+          <Card produto={"CPU"} valor={799.90} desconto={50}/>
         </div>
       </div>      
   );
