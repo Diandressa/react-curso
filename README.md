@@ -3,6 +3,18 @@ Curso de React e Next JS do CFB Curso
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
+## Para iniciar o projeto
+Clonar o projeto 
+
+Instalar os react-dom:
+
+`npm install --save-dev @types/react @types/react-dom
+`
+
+Iniciar com o comando:
+
+`npm run dev`
+
 ## Criar Projeto
 
 `npx create-next-app@latest nomeProjeto`

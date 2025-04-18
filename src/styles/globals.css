@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";  /* Reset CSS (substituto do base) */
+/*@import "tailwindcss/preflight";   Reset CSS (substituto do base) */
 @import "tailwindcss/utilities"; /* Todas as utilities */
 
 /*Importar outro css*/

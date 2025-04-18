@@ -1,3 +1,4 @@
+import Card from "./Card"
 export default function Topo() {
     return(
         <div className='flex justify-between items-center bg-cyan-400 h-[100px] '>
@@ -7,6 +8,8 @@ export default function Topo() {
                 <div className="subtituloTopo">Curso de React</div>
             </div>
             <div>Andressa</div>
+            {/*Podemos usar um componente dentro de outro componente */}
+            <Card/>
         </div>
     )
 }

@@ -2,20 +2,22 @@
 //import { Geist, Geist_Mono } from "next/font/google";
 
 import Topo from "@/components/Topo";
-
-// const nome='Bruno Nicolau';
-// const nomeFuncao='Andressa';
-// let canal = 'CFB Cursos';
+import Card from "@/components/Card";
 
 export default function Home() {
   return (
       <div>
         <Topo/>
-        {/*style inline css com objeto, usamos uma chave só pq a outra chave já está no objeto*/}
         <div style={cssobjeto}>
-          {/*style inline, usa css do javascript. Segui a sintaxe do css no js*/}
           <div style={{color:'#fff', backgroundColor: 'darkcyan', marginRight:'1rem', paddingInline:'1rem'}}>Curso de React Next</div>
           <div>Typescript</div>
+        </div>
+        <div className="flex justify-center gap-3">
+          {/* passando a propriedade que era receber na função desse componente - armazena na variável props*/}
+          <Card produto={"Mouse"} valor={'R$49,90'}/>
+          <Card produto={"Teclado"} valor={'R$69,90'}/>
+          <Card produto={"Monitor"} valor={'R$459,90'}/>
+          <Card produto={"CPU"} valor={'R$799,90'}/>
         </div>
       </div>      
   );
