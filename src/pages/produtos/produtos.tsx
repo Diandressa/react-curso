@@ -83,7 +83,11 @@ export default function produtosPagina(){
                 produtos.map((e:any)=>{
                 if(e.disponivel){
                     return (
-                    <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc}/>
+                    <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc}>
+                        {/*elementos filho do componente, passe o filho para o componente. */}
+                        <div>Curso de React Next</div>
+                        <div>CFB Cursos</div>
+                    </Card>
                     )
                 }
                 })

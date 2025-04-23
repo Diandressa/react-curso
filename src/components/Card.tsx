@@ -5,7 +5,9 @@ interface CardProps{
     produto:string,
     valor:number,
     desconto:number,
-    funcao:any
+    funcao:any,
+    //prever o tipo do filho
+    children:any
 }
 
 export default function Card(props:CardProps){
@@ -20,7 +22,8 @@ export default function Card(props:CardProps){
                     <div>Preço Venda: R${props.funcao(props.valor, props.desconto)}</div>
                 </div>
             )}
-            
+            {/*Receber o elemento filho declarado do componente. Array pega só um elemento específico */}
+            <div>{props.children[0]}</div>
         </div>   
     )
 }
