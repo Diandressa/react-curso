@@ -3,9 +3,13 @@
 import Card from "@/components/Card";
 import Topo from "@/components/Topo";
 
+//pegar os parâmetros passados pela URL no link com o Router, Router é um hook
+import { useRouter } from "next/router";
+
 //array de objetos
 const produtos=[
   {
+    id:1,
     produto: 'Mouse',
     valor: 49.9,
     desconto: 0,
@@ -13,6 +17,7 @@ const produtos=[
 
   },
   {
+    id:2,
     produto: 'Teclado',
     valor: 659.9,
     desconto: 10,
@@ -20,6 +25,7 @@ const produtos=[
 
   },
   {
+    id:3,
     produto: 'Monitor',
     valor: 689.9,
     desconto: 0,
@@ -27,6 +33,7 @@ const produtos=[
 
   },
   {
+    id:4,
     produto: 'CPU',
     valor: 829.9,
     desconto: 100,
@@ -34,6 +41,7 @@ const produtos=[
 
   },
   {
+    id:5,
     produto: 'Caixa Som',
     valor: 39.9,
     desconto: 0,
@@ -41,6 +49,7 @@ const produtos=[
 
   },
   {
+    id:6,
     produto: 'Microfone',
     valor: 65.0,
     desconto: 0,
@@ -58,6 +67,13 @@ function calcDesc2(valor:number, desconto:number){
 }
 
 export default function produtosPagina(){
+  //pegar os parâmetros passados pela URL no link com o Router
+  const Router = useRouter();
+  //const nome = Router.query.nome;
+  //const curso = Router.query.curso;
+  //desestruturar
+  const {nome, curso} = Router.query;
+  console.log(nome, curso)
     return(
         <>
             <Topo/>
@@ -67,7 +83,7 @@ export default function produtosPagina(){
                 produtos.map((e:any)=>{
                 if(e.disponivel){
                     return (
-                    <Card produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc}/>
+                    <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc}/>
                     )
                 }
                 })

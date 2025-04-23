@@ -14,7 +14,16 @@ export default function Topo() {
                 <Link href={"/"}>
                     Home
                 </Link>
-                <Link href={"/produtos/produtos"}>
+                {/*Passar parâmetros (como objetos) para o link, envia pela URL*/}
+                <Link href={
+                    {
+                        pathname: "/produtos/produtos",
+                        query: {
+                            nome: 'Andressa',
+                            curso: 'React Next'
+                        }
+                    }
+                }>
                     Produtos
                 </Link>
                 <Link href={"/teste/teste"}>
