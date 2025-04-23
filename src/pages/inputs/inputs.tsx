@@ -1,25 +1,35 @@
 import Topo from "@/components/Topo";
 import {useState} from "react";
 
+//lista-array
+const cursos=["HTML","React", "C++","Javascript", "CSS"]
+
 export default function Inputs(){
     //capturar o valor do input com state
     const [nome, setNome]=useState<string>("")
-    const [curso, setCurso]=useState<string>("")
+    const [curso, setCurso]=useState<string>(cursos[0])
 
-    //onChange para alterar o value do input
-    //event.target.value → É o valor atual que está dentro do input. Passamos ele para variável nome ou curso
-    /*
-    🔄 Processo completo
-        O usuário digita "J".
+    function fcursos(){
+        return cursos.map((item:any)=>{
+            return <option value={item}>{item}</option>  
+        })
+    }
 
-        onChange dispara.
+    const ccursos = cursos.map((item:any)=>{
+        return <option value={item}>{item}</option>  
+    })
 
-        event.target.value é "J".
+    const jcursos = [
+        {"curso": "HTML"},
+        {"curso": "Javascript"},
+        {"curso": "C++"},
+        {"curso": "Javascript"},
+        {"curso": "CSS"}
+    ]
 
-        setNome("J") atualiza o estado.
-
-        O input mostra o novo valor.
-    */
+    const jsoncursos = jcursos.map((item:any)=>{
+        return <option value={item.curso}>{item.curso}</option>  
+    })
 
     return(
         <div>
@@ -32,12 +42,11 @@ export default function Inputs(){
             <div className="campoForm">
                 <label>Curso</label>
                 <select value={curso} onChange={(event)=> setCurso(event.target.value)}>
-                    <option value=""></option>
-                    <option value="HTML">HTML</option>
-                    <option value="React">React</option>
-                    <option value="C++">C++</option>
-                    <option value="Javascript">Javascript</option>
-                    <option value="CSS">CSS</option>
+                   {
+                        //fcursos()
+                        //ccursos
+                        jsoncursos
+                   }
                 </select>
             </div>
             <div>Nome digitado: {nome}</div>
