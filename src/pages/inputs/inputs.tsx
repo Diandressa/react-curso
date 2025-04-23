@@ -1,3 +1,4 @@
+import Topo from "@/components/Topo";
 import {useState} from "react";
 
 export default function Inputs(){
@@ -22,6 +23,7 @@ export default function Inputs(){
 
     return(
         <div>
+            <Topo/>
             <div className="campoForm">
                 <label>Nome</label>
                 {/*Pego o evento do input e passo para a função que alterar o componente*/}
@@ -29,7 +31,14 @@ export default function Inputs(){
             </div>
             <div className="campoForm">
                 <label>Curso</label>
-                <input type="text" value={curso} onChange={(event)=>setCurso(event.target.value)}/>
+                <select value={curso} onChange={(event)=> setCurso(event.target.value)}>
+                    <option value=""></option>
+                    <option value="HTML">HTML</option>
+                    <option value="React">React</option>
+                    <option value="C++">C++</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="CSS">CSS</option>
+                </select>
             </div>
             <div>Nome digitado: {nome}</div>
             <div>Curso digitado: {curso}</div>

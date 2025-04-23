@@ -1,6 +1,7 @@
 //hook useState - quando tem o valor alterado ele chama a renderização da página
 
 //importar useState
+import Topo from "@/components/Topo";
 import { useState } from "react";
 
 export default function usestate(){
@@ -18,7 +19,8 @@ export default function usestate(){
 
     return(
         <div>
-            usestate
+            <Topo/>
+            useState
             <div>{cont}</div>
             <button onClick={contador} className="btnPadrao">Add</button>
         </div>
