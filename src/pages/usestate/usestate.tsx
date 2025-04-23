@@ -20,7 +20,7 @@ export default function usestate(){
         <div>
             usestate
             <div>{cont}</div>
-            <button onClick={contador}>Add</button>
+            <button onClick={contador} className="btnPadrao">Add</button>
         </div>
     )
 }

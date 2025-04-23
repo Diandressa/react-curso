@@ -23,3 +23,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.btnPadrao{
+  display: flex;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.campoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.campoForm label{
+  font-size: large;
+}
+
+.campoForm input{
+    border: 1px solid #fff;
+    padding: 3px;
+    border-radius: 3px;
+}
+
