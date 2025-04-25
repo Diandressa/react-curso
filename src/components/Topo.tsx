@@ -32,6 +32,9 @@ export default function Topo() {
                 <Link href={"/usestate/usestate"}>
                     UseState
                 </Link>
+                <Link href={"/useeffect/useeffect"}>
+                    UseEffect
+                </Link>
                 <Link href={"/inputs/inputs"}>
                     Inputs
                 </Link>
