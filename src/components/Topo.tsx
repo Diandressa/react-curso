@@ -38,6 +38,9 @@ export default function Topo() {
                 <Link href={"/inputs/inputs"}>
                     Inputs
                 </Link>
+                <Link href={"/filtragem/filtragem"}>
+                    Filtragem
+                </Link>
             </nav>
         </div>
     )
