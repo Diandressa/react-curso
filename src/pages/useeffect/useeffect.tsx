@@ -1,6 +1,8 @@
 import Topo from "@/components/Topo";
 import { useState, useEffect } from "react";
 
+import Globais from "@/components/Globais";
+
 //useeffect é chamado toda vez que a página é renderizada, quando a renderização é chamada, diferente do useState, o useState dispara a renderização 
 //podemos configura o useEffect. Ex: chamar somente na primeira renderização; chamar quando determinado componente for alterado.
 
@@ -11,25 +13,10 @@ export default function UseEffect(){
     const [aux, setAux] = useState<number>(0);
 
     useEffect(()=>{
-        //o useEffect é acionado quando acontece renderização, e a renderização está sendo chamada no setCont que renderiza com zero inicialmente. Isso é a renderização continua
-
-        // let c = cont;
-        // c++
-        // setCont(c)
-
-        //variável comum não aciona a renderização da página, só quando uso o useState
-        //o valor de aux é 1 agora, mas não é renderizado na tela
-        // aux++
-
-        //chamar useEffect uma vez, somente quando a página for carregada ao abrir a página. Pra isso usamos o segundo parâmetros, que são chamadas de dependências. A segunda dependência é um array vazio.
-        //o array vazio chama o effect uma vez 
-
-        //chamar useEffect somente quando o useState for alterado, sem looping.
-
-        //O use effect é disparado pq quando abrimos a página ele renderiza o aux. E ele executa só nessa renderização, por causa do colchetes vazio []
-        alert('Use effect disparado')
-
-        //se eu passo o aux na dependência, sempre que aux é alterado e a página é renderizada ele chama o alert
+        alert('Use effect disparado');
+        Globais.canal="CFB Cursos"
+        Globais.curso="Typescript"
+        Globais.ano="2024"
     },[aux])
 
     function add(){
@@ -51,6 +38,12 @@ export default function UseEffect(){
                 <p>{`Valor de cont: ${cont}`}</p>
                 <p>{`Valor de aux: ${aux}`}</p>
                 <button onClick={add} className="btnPadrao">Adicionar 1</button>
+            </div>
+            <div>
+                <h1 className="text-3xl mt-3">Globais</h1>
+                <p>{Globais.canal}</p>
+                <p>{Globais.curso}</p>
+                <p>{Globais.ano}</p>
             </div>
         </div>
     )
