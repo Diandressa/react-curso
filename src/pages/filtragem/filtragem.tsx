@@ -15,8 +15,28 @@ export default function Filtragem(){
     const [linhas, setLinhas] = useState<any[]>([]);
 
     function criarLinhas(cat:any){
+        //coloca a categoria selecionada no select, que foi enviada para a função no clique, no useState
         setCateg(cat);
+
         //percorrer o array e retornar os elementos que correspondem a categoria selecionada
+
+        let linha:any[] = []
+        
+        carros.forEach((carro:any)=>{
+            //se o item tiver a mesma string da que foi passada pra função eu coloca na lista linha o conteúdo que quero renderizar com os valores daquele item
+            if(carro.categ == cat){
+                linha.push(
+                <div className="flex flex-row w-[500px]" key={carro.id}>
+                    <div className="w-full">{carro.categ}</div>
+                    <div className="w-full">{carro.valor}</div>
+                    <div className="w-full">{carro.modelo}</div>
+                </div>
+                )
+            }
+        })
+
+        //seta a nova array no setLinhas, para renderizar na tela
+        setLinhas(linha)
     }
 
     return(
