@@ -57,3 +57,13 @@ Material Icon Theme (opcional)
 ## Instalar as dependências do PostCSS caso necessário
 
 `npm install postcss postcss-loader css-loader --save-dev`
+
+## Compilar/ Build
+
+No terminal git Bash, abrir na pasta do projeto.
+
+`npm run` para ver as opções
+
+`npm run build` para compilar
+
+`npm start` para iniciar o projeto

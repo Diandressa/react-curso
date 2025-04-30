@@ -19,12 +19,13 @@ export default function Inputs(){
 
     function fcursos(){
         return cursos.map((item:any)=>{
-            return <option value={item}>{item}</option>  
+            //não tem ID no array, então usamos o Math.random para gera um número aleatório
+            return <option key={Math.random()*999999999999999} value={item}>{item}</option>  
         })
     }
 
     const ccursos = cursos.map((item:any)=>{
-        return <option value={item}>{item}</option>  
+        return <option key={Math.random()*999999999999999} value={item}>{item}</option>  
     })
 
     const jcursos = [

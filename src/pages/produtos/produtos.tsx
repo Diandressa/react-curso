@@ -66,7 +66,7 @@ function calcDesc2(valor:number, desconto:number){
   return valor - (desconto/2)
 }
 
-export default function produtosPagina(){
+export default function ProdutosPagina(){
   //pegar os parâmetros passados pela URL no link com o Router
   const Router = useRouter();
   //const nome = Router.query.nome;

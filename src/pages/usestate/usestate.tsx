@@ -4,7 +4,7 @@
 import Topo from "@/components/Topo";
 import { useState } from "react";
 
-export default function usestate(){
+export default function Usestate(){
     //ao clicar no btn alteramos o valor da variável e renderizamos na tela
 
     //nomedostate, funcaomanipuladora
