@@ -26,8 +26,8 @@ export default function Topo() {
                 }>
                     Produtos
                 </Link>
-                <Link href={"/teste/Teste"}>
-                    Teste
+                <Link href={"/localStorage/localStorage"}>
+                    LocalStorage
                 </Link>
                 <Link href={"/usestate/Usestate"}>
                     UseState
