@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Compform from "@/components/Compform";
 
 export default function Calcimc(){
     const [peso, setPeso] = useState<string>('');
@@ -6,7 +7,9 @@ export default function Calcimc(){
 
     return(
         <div>
-            <p>Cálculo do IMC</p>
+            <h1>Cálculo do IMC</h1>
+            <Compform label="peso" state={peso} funcState={setPeso}/>
+            <Compform label="altura" state={altura} funcState={setAltura}/>
         </div>
     )
 }
