@@ -2,9 +2,6 @@
 /*@import "tailwindcss/preflight";   Reset CSS (substituto do base) */
 @import "tailwindcss/utilities"; /* Todas as utilities */
 
-/*Importar outro css*/
-@import './topo.css';
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
