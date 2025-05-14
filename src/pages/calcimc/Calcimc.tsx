@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Compform from "@/components/Compform";
+import Campform from "@/components/Campform";
 import Tabelaimc from "@/components/Tabelaimc";
 
 export default function Calcimc(){
@@ -13,12 +13,12 @@ export default function Calcimc(){
     }
 
     return(
-        <div>
-            <h1>Cálculo do IMC</h1>
-            <Compform label="peso" state={peso} funcState={setPeso}/>
-            <Compform label="altura" state={altura} funcState={setAltura}/>
-            <button className="btnPadrao" onClick={calcular}>Calcular</button>
-            <p>Resultado: {imc}</p>
+        <div className="flex flex-col border border-amber-300 w-[300px] gap-5">
+            <h1 className="w-full text-center bg-amber-300 text-black font-bold text-lg">Cálculo do </h1>
+            <Campform label="peso" state={peso} funcState={setPeso}/>
+            <Campform label="altura" state={altura} funcState={setAltura}/>
+            <button className="bg-amber-50 text-center mx-2 text-black p-1 rounded-lg cursor-pointer" onClick={calcular}>Calcular</button>
+            <p className="p-1">Resultado: {imc}</p>
             <Tabelaimc/>
         </div>
     )
