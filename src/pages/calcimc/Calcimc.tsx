@@ -18,8 +18,8 @@ export default function Calcimc(){
             <Campform label="peso" state={peso} funcState={setPeso}/>
             <Campform label="altura" state={altura} funcState={setAltura}/>
             <button className="bg-amber-50 text-center mx-2 text-black p-1 rounded-lg cursor-pointer" onClick={calcular}>Calcular</button>
-            <p className="p-1">Resultado: {imc}</p>
-            <Tabelaimc/>
+            <p className="p-1">Resultado: {imc.toFixed(2)}</p>
+            <Tabelaimc imc={imc}/>
         </div>
     )
 }
