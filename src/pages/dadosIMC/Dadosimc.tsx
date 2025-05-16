@@ -22,32 +22,47 @@ export default function Dadosimc(){
     return(
         <div>
             <div>
-                <div>
+                <div className='campoForm'>
                     <label>Nome</label>
-                    <input type="text" value={nome} onChange={(e)=>setNome(e.target.value)}/>
+                    <input className="inputDados" type="text" value={nome} onChange={(e)=>setNome(e.target.value)}/>
                 </div>
-                <div>
+                <div className='campoForm'>
                     <label>Peso</label>
-                    <input type="text" value={peso} readOnly/>
+                    <input className="inputDados" type="text" value={peso} readOnly/>
                 </div>
-                <div>
+                <div className='campoForm'>
                     <label>Altura</label>
-                    <input type="text" value={altura} readOnly/>
+                    <input className="inputDados" type="text" value={altura} readOnly/>
                 </div>
-                <div>
+                <div className='campoForm'>
                     <label>IMC</label>
-                    <input type="text" value={imc} readOnly/>
+                    <input className="inputDados" type="text" value={imc} readOnly/>
                 </div>
-                <div>
+                <div className='campoForm'>
                     <label>Data</label>
-                    <input type="text" value={data} readOnly/>
+                    <input className="inputDados" type="text" value={data} readOnly/>
                 </div>
-                <div>
-                    <button className="border px-3">Gravar</button>
+                <div className='campoForm'>
+                    <button className="botaoDados">Gravar</button>
                 </div>
             </div>
-            <div>
-                GRID
+            <div className="grid">
+                <div className="gridLinhaTitulos">
+                    <div className="gridTitulos">Nome</div>
+                    <div className="gridTitulos">Peso</div>
+                    <div className="gridTitulos">Altura</div>
+                    <div className="gridTitulos">IMC</div>
+                    <div className="gridTitulos">Data</div>
+                </div>
+                <div className="gridLinhaDados">
+                    <div className="gridLinhas">
+                        <div className="gridLinha">Nome1</div>
+                        <div className="gridLinha">Peso1</div>
+                        <div className="gridLinha">Altura1</div>
+                        <div className="gridLinha">IMC1</div>
+                        <div className="gridLinha">Data1</div>
+                    </div>
+                </div>
             </div>
         </div>
     )
